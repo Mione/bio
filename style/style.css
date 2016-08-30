@@ -1,0 +1,15 @@
+.left-writer,
+.right-writer {
+  position: absolute;
+  top: 0;
+  width: 600px;
+  overflow-x: auto;
+}
+
+.left-writer {
+  left: 0;
+}
+
+.right-writer {
+  right: 0;
+}
