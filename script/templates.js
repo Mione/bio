@@ -1,8 +1,6 @@
 window.template1 = `/**
   * Hello.^
-  * I'm Marius.^
-  * And I'm hoping you'll like what you'll see.^^ 
-  * I'm gonna create my bio website^^
+  * I'm Marius^, and we're gonna write some code together.^^
   * Let's start by coloring the body */^
    @body {
     font-family: 'Open Sans', sans-serif;
@@ -11,12 +9,13 @@ window.template1 = `/**
     padding: 100px;
    }|^
 
-  // Let's add a container.^
+  // Let's add some html.^
   $var element = document.createElement('div');
   element.classList.add('container');
   document.body.appendChild(element);|^
+  //... nothing shows up?
 
-  // Let's style it:^
+  // Let's style it:P ^
   @.container {
     background: #fff;
     border-radius: 2px;

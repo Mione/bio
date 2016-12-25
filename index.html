@@ -10,12 +10,19 @@
 
 <body>
   <aside>
-    <pre class='left-writer'></pre>
-    <pre class='right-writer'></pre>
+    <pre class='writer' id='draggable'></pre>
   </aside>
   </code>
   <script src="script/templates.js"></script>
   <script src="script/app.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+    (function () {
+      //I'm too lazy to do draggable now
+      $("#draggable").draggable({ });
+    } ());
+  </script>
 </body>
 
 </html>

@@ -1,7 +1,6 @@
 (function () {
   'use strict';
-  var leftWriter = document.querySelector('.left-writer');
-  var rightWriter = document.querySelector('.right-writer');
+  var writer = document.querySelector('.writer');
 
   function write(element, string, skip, callback) {
     var count = 0;
@@ -18,10 +17,12 @@
       delayTime = 1;
       intervalTime = 1;
     }
-    if(!string) {
+
+    if (!string) {
       alert('Unfortunately this browser sux, please use latest Chrome or FF');
       return;
     }
+
     interval = setInterval(function () {
 
       var currentChar = string[count];
@@ -46,7 +47,7 @@
           }
 
           if (style.length) {
-            document.styleSheets[0].insertRule(style.replace('@', ''),0);
+            document.styleSheets[0].insertRule(style.replace('@', ''), 0);
           }
 
           code = '';
@@ -78,14 +79,14 @@
         code = code + currentChar;
       }
 
-      element.textContent = element.textContent + currentChar;
+      element.innerHTML = element.innerHTML + currentChar;
       count = count + 1;
     }, intervalTime);
   }
 
-  write(leftWriter, window.template1, false, function () {
-    write(rightWriter, window.template2, true, function () {
-      write(rightWriter, window.template3, false, function () {
+  write(writer, window.template1, false, function () {
+    write(writer, window.template2, true, function () {
+      write(writer, window.template3, false, function () {
         console.log('done!');
       })
     })
